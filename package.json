@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "weatherbuild": "ng build weather && cd dist/weather && npm publish --"
   },
   "private": true,
   "dependencies": {
@@ -20,9 +21,11 @@
     "@angular/router": "~12.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
+    "weather": "file:dist/weather/weather-0.0.1.tgz",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.5",
     "@angular/cli": "~12.0.3",
     "@angular/compiler-cli": "~12.0.3",
     "@types/jasmine": "~3.6.0",
@@ -33,6 +36,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^12.0.0",
     "typescript": "~4.2.3"
   }
 }
